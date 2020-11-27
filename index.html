@@ -4,6 +4,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Assistant&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style>
   * {
@@ -12,11 +13,11 @@
 
 body {
   font-family: 'Rubik', sans-serif;
-  padding: 10px;
+  
   background: white;
 }
 
-/* Header */
+/* Header/Blog Title */
 .header {
   padding: 30px;
   text-align: center;
@@ -95,13 +96,54 @@ body {
   display: table;
   clear: both;
 }
+/* Social media buttons */
+.fa {
+  padding: 20px;
+  font-size: 20px;
+  width: 60px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
 
 /* Footer */
 .footer {
   padding: 20px;
-  text-align: center;
   background: #a8dde3;
-  margin-top: 20px;
+  margin-top: 10px;
+  
+}
+.footer p {
+  float: center;
+  font-size: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 
@@ -127,12 +169,13 @@ body {
     <link href="style.css" rel="stylesheet" type="text/css" />
 
 </head>
+
 <body>
 <script src="script.js"></script>
 
 
 <div class="topnav">
-  <a href="index.html" style="float:left;background-color: #003b42;color: white;">Company Name</a>
+  <a href="#" style="float:left;background-color: #003b42;color: white;">Company Name</a>
   <a href="#">Link</a>
   <a href="#">Link</a>
   <a href="#">Link</a>
@@ -151,37 +194,43 @@ body {
       <h5>Title description, Dec 7, 2017</h5>
       <div class="fakeimg" style="height:200px;">Image</div>
       <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+      
     </div>
     <div class="card">
       <h2>TITLE HEADING</h2>
       <h5>Title description</h5>
       <div class="fakeimg" style="height:200px;">Image</div>
       <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+     
     </div>
   </div>
   <div class="rightcolumn">
     <div class="card">
-      <h2>About Us</h2>
+      <h2>About Me</h2>
       <div class="fakeimg" style="height:100px;">Image</div>
-      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+      <p>Some text ..</p>
     </div>
     <div class="card">
-      <h3>Popular Post</h3>
+      <h3>Popular Products</h3>
       <div class="fakeimg"><p>Image</p></div>
       <div class="fakeimg"><p>Image</p></div>
       <div class="fakeimg"><p>Image</p></div>
     </div>
     <div class="card">
       <h3>Follow Us</h3>
-      <p>Some text..</p>
+      <p>We'd love to hear from you.</p>
+      <a href="#" class="fa fa-facebook"></a>
+      <a href="#" class="fa fa-twitter"></a>
+      <a href="#" class="fa fa-instagram"></a>
+      <a href="#" class="fa fa-google"></a>
     </div>
   </div>
 </div>
 
 <div class="footer">
-  <h2>Footer</h2>
+  <p> dfdfdfdfddfd </p>
+  
+
 </div>
 </body>
 
