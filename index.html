@@ -61,18 +61,20 @@ body {
 
 /* Button styling */
 .button {
-  border: none;
-  color: white;
-  background-color: #003b42;
+  border:2px solid #003b42;
+  color: #003b42;;
+  background-color: white;
   padding: 16px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
   font-family: 'Assistant', sans-serif;
-  transition-duration: 0.4s;
   cursor: pointer;
   border-radius: 50px;
+}
+.button:hover {
+  background-color: #003b42;
 }
 /* Get Started button */
 .button span {
@@ -93,11 +95,15 @@ body {
 
 .button:hover span {
   padding-right: 15px;
+  color: white;
+  transition-duration: 0.5s;
 }
 
 .button:hover span:after {
   opacity: 1;
   right: 0;
+  color: white;
+  transition-duration: 0.5s;
 }
 
 /* Create two unequal columns that floats next to each other */
