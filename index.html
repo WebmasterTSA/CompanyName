@@ -1,53 +1,188 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant&display=swap" rel="stylesheet">
 
-<head>
-<title>COMPANY</title>	
-<link rel="icon" type="image/ico" href="favicon.ico?v=1.0" />
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
-	
 <style>
-/* Style the header: https://designshack.net/articles/css/the-10-best-script-and-handwritten-google-web-fonts/   */
+  * {
+  box-sizing: border-box;
+}
 
+body {
+  font-family: 'Rubik', sans-serif;
+  padding: 10px;
+  background: white;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  text-align: center;
+  background: white;
+  color: #003b42;
+}
+
+.header h1 {
+  font-size: 50px;
+}
+
+.header h2 {
+  font-size: 25px;
+  font-family: 'Assistant', sans-serif;
+  color: black;
+
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #003b42;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #0092a3;
+  color: black;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: white;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: #e6f8fa;
+  padding: 20px;
+  margin-top: 20px;
+}
+.card p {
+  font-family: 'Assistant', sans-serif;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #a8dde3;
+  margin-top: 20px;
+}
+
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
 </style>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Company Name</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
 
-<link rel="stylesheet" href="style.css">	
-	
 </head>
-	
 <body>
-	<div id="grad1"></div>
-	<script>
-	</script>
+<script src="script.js"></script>
 
-<div class="header"> 
-	<img src="images/ampere_logo.png"
-	 alt="Company Logo" align= "top"
-	 style="float:left; margin-bottom:20px; height: 200px; width: 150px; object-fit: contain;"> 
-</div>
 
 <div class="topnav">
-  <center>
-  <a href="index.html">HOME</a>
-  <a href="categories.html">Categories</a>
-  <a href="products.html">Products</a>
-  <a href="contacts.html">CONTACT US</a>
-  <a href="about.html">ABOUT</a>
-  </center>
+  <a href="#" style="float:left;background-color: #003b42;color: white;">Company Name</a>
+  <a href="#">Link</a>
+  <a href="#">About</a>
+  <a href="#">Link</a>
+  
 </div>
-<h1> <b> INSERT COMPANY NAME </b> </h2>
-	
-<h2> Got a medical need? </h2>
-<h4> We're here to help. </h4>
 
-	
-<br>
-<a style= "font-family: 'Rubik', sans-serif; font-size: 15px; float:left; color: #C891FF; margin-left: 50px" href="east.html">GO TO OUR SCHOOL PAGE</a>	
-<a style= "font-family: 'Rubik', sans-serif; font-size: 15px; float:right; color: #C891FF;  margin-right: 50px" href="tsa.html">GO TO FIND INFORMATION ON OUR TSA CHAPTER </a>	
-	
-<br>
+<div class="header">
+  <h1>Company Name</h1>
+  <h2>Got a problem? We can help.</h2>
+</div>
 
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>TITLE HEADING</h2>
+      <h5>Title description, Dec 7, 2017</h5>
+      <div class="fakeimg" style="height:200px;">Image</div>
+      <p>Some text..</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    </div>
+    <div class="card">
+      <h2>TITLE HEADING</h2>
+      <h5>Title description, Sep 2, 2017</h5>
+      <div class="fakeimg" style="height:200px;">Image</div>
+      <p>Some text..</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>About Me</h2>
+      <div class="fakeimg" style="height:100px;">Image</div>
+      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+    </div>
+    <div class="card">
+      <h3>Popular Post</h3>
+      <div class="fakeimg"><p>Image</p></div>
+      <div class="fakeimg"><p>Image</p></div>
+      <div class="fakeimg"><p>Image</p></div>
+    </div>
+    <div class="card">
+      <h3>Follow Us</h3>
+      <p>Some text..</p>
+    </div>
+  </div>
+</div>
 
+<div class="footer">
+  <h2>Footer</h2>
+</div>
 </body>
+
 </html>
