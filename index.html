@@ -58,6 +58,34 @@ body {
   color: black;
 }
 
+/* Button styling */
+.button {
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: 'Assistant', sans-serif;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+/* Get Started button */
+.button1 {
+  background-color: white; 
+  color: #003b42; 
+  border: 2px solid #003b42;
+  border-radius: 50px;
+  
+}
+
+.button1:hover {
+  background-color: #003b42;
+  color: white;
+}
+
 /* Create two unequal columns that floats next to each other */
 /* Left column */
 .leftcolumn {   
@@ -78,6 +106,15 @@ body {
   background-color: #aaa;
   width: 100%;
   padding: 20px;
+}
+
+/* Company logo */
+.logo {
+  background-color: blue;
+  width: 100%;
+  padding: 20px;
+  float: left;
+  
 }
 
 /* Add a card effect for articles */
@@ -137,6 +174,7 @@ body {
   padding: 20px;
   background: #a8dde3;
   margin-top: 10px;
+  height: 100%;
   
 }
 .footer p {
@@ -144,6 +182,7 @@ body {
   font-size: 10px;
   margin-top: 5px;
   margin-bottom: 5px;
+  font-family: 'Assistant', sans-serif;
 }
 
 
@@ -161,6 +200,14 @@ body {
     float: none;
     width: 100%;
   }
+  .logo {
+    float: none;
+    /* This centers the logo. */
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
 }
 </style>
 <meta charset="utf-8">
@@ -175,10 +222,11 @@ body {
 
 
 <div class="topnav">
-  <a href="#" style="float:left;background-color: #003b42;color: white;">Company Name</a>
-  <a href="#">Link</a>
-  <a href="#">Link</a>
-  <a href="#">Link</a>
+  <div class="logo" style="height:50px; width: 50px; "></div> 
+  <a href="#" style="float:left; background-color: #003b42;color: white;">Company Name</a>
+  <a href="#" style="float:right;">Link</a>
+  <a href="#" style="float:right;">Link</a>
+  <a href="#" style="float:right;">Link</a>
   
 </div>
 
@@ -187,11 +235,15 @@ body {
   <h2>Got a medical problem? We can help.</h2>
 </div>
 
+<center>
+<button class="button button1">Get Started</button>
+</center>
+
 <div class="row">
   <div class="leftcolumn">
     <div class="card">
       <h2>TITLE HEADING</h2>
-      <h5>Title description, Dec 7, 2017</h5>
+      <h5>Title description</h5>
       <div class="fakeimg" style="height:200px;">Image</div>
       <p>Some text..</p>
       
@@ -206,31 +258,38 @@ body {
   </div>
   <div class="rightcolumn">
     <div class="card">
-      <h2>About Me</h2>
+      <h2>About Us</h2>
       <div class="fakeimg" style="height:100px;">Image</div>
-      <p>Some text ..</p>
+      <p>We are a telecommunications company.</p>
     </div>
     <div class="card">
       <h3>Popular Products</h3>
-      <div class="fakeimg"><p>Image</p></div>
+      <div class="fakeimg"> <!--src="..." alt="..."--> <p>Image</p></div>
       <div class="fakeimg"><p>Image</p></div>
       <div class="fakeimg"><p>Image</p></div>
     </div>
     <div class="card">
       <h3>Follow Us</h3>
       <p>We'd love to hear from you.</p>
-      <a href="#" class="fa fa-facebook"></a>
-      <a href="#" class="fa fa-twitter"></a>
-      <a href="#" class="fa fa-instagram"></a>
-      <a href="#" class="fa fa-google"></a>
+      <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+      <a href="https://twitter.com/?lang=en" class="fa fa-twitter"></a>
+      <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+      <a href="https://www.google.com/" class="fa fa-google"></a>
     </div>
   </div>
 </div>
 
 <div class="footer">
-  <p> dfdfdfdfddfd </p>
-  
+  <!-- This is the logo image. -->
+  <div class="logo" style="height:80px; width: 80px;float:left; margin-right: 5px;">Logo</div>
 
+  <!-- Probably gonna take link out -->
+  <a href="index.html" style="float:left;font-size: 18;color: black;">Company Name</a> 
+  <br>
+  <p> Phone: 123-456-7890 </p>
+  <p> HQ: 123 St, Orlando, Florida, USA </p> <!-- Hyperlink to google maps? -->
+  <p> All Rights Reserved ® </p>
+  
 </div>
 </body>
 
