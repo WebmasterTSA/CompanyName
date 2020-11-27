@@ -63,27 +63,41 @@ body {
 .button {
   border: none;
   color: white;
+  background-color: #003b42;
   padding: 16px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
   font-family: 'Assistant', sans-serif;
-  margin: 4px 2px;
   transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 50px;
 }
 /* Get Started button */
-.button1 {
-  background-color: white; 
-  color: #003b42; 
-  border: 2px solid #003b42;
-  border-radius: 50px;
-  
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
 }
 
-.button1:hover {
-  background-color: #003b42;
-  color: white;
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 15px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
 }
 
 /* Create two unequal columns that floats next to each other */
@@ -168,7 +182,6 @@ body {
   color: white;
 }
 
-
 /* Footer */
 .footer {
   padding: 20px;
@@ -185,7 +198,7 @@ body {
   font-family: 'Assistant', sans-serif;
 }
 
-
+/* -------------------------------------- */  
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 800px) {
   .leftcolumn, .rightcolumn {   
@@ -214,6 +227,7 @@ body {
     <meta name="viewport" content="width=device-width">
     <title>Company Name</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <!--Favicon stuff --> <link rel="icon" type="image folder name i think/ico" href="favicon link here" />
 
 </head>
 
@@ -236,7 +250,7 @@ body {
 </div>
 
 <center>
-<button class="button button1">Get Started</button>
+  <button class="button"><span>Get Started</span></button>
 </center>
 
 <div class="row">
