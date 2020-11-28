@@ -130,8 +130,6 @@ body {
 
 /* Company logo */
 .logo {
-  background-color: blue;
-  width: 100%;
   padding: 20px;
   float: left;
   
@@ -188,6 +186,7 @@ body {
   color: white;
 }
 
+
 /* Footer */
 .footer {
   padding: 20px;
@@ -203,8 +202,13 @@ body {
   margin-bottom: 5px;
   font-family: 'Assistant', sans-serif;
 }
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 
-/* -------------------------------------- */  
+
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 800px) {
   .leftcolumn, .rightcolumn {   
@@ -224,7 +228,8 @@ body {
     /* This centers the logo. */
     display: block;
     margin-left: auto;
-    margin-right: auto
+    margin-right: auto;
+    width: 50%;
 }
 
 }
@@ -233,7 +238,6 @@ body {
     <meta name="viewport" content="width=device-width">
     <title>Company Name</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
-    <!--Favicon stuff --> <link rel="icon" type="image folder name i think/ico" href="favicon link here" />
 
 </head>
 
@@ -242,11 +246,17 @@ body {
 
 
 <div class="topnav">
-  <div class="logo" style="height:50px; width: 50px; "></div> 
+  <div class="logo" >
+<div class= "clearfix">
+    <p><img src="logo.jpg" alt="Logo" style="width:50px; height:50px;">
+  </div> 
+
+  </div>
+  
   <a href="#" style="float:left; background-color: #003b42;color: white;">Company Name</a>
-  <a href="#" style="float:right;">Link</a>
-  <a href="#" style="float:right;">Link</a>
-  <a href="#" style="float:right;">Link</a>
+  <a href="#" style="float:right;">Meetings</a>
+  <a href="#" style="float:right;">Resources</a>
+  <a href="#" style="float:right;">Company</a>
   
 </div>
 
@@ -256,7 +266,7 @@ body {
 </div>
 
 <center>
-  <button class="button"><span>Get Started</span></button>
+<button class="button"><span>Get Started</span></button>
 </center>
 
 <div class="row">
@@ -301,14 +311,18 @@ body {
 
 <div class="footer">
   <!-- This is the logo image. -->
-  <div class="logo" style="height:80px; width: 80px;float:left; margin-right: 5px;">Logo</div>
-
+ <div class= "clearfix">
+    <p><img src="logo.jpg" alt="Logo" style="float: left; width:80px;height:80px;margin-right:5px;">
+  </div>
   <!-- Probably gonna take link out -->
-  <a href="index.html" style="float:left;font-size: 18;color: black;">Company Name</a> 
+  <p> <a href="index.html" style="float:left;font-size: 18; color: black;">Company Name</a> </p> 
   <br>
   <p> Phone: 123-456-7890 </p>
+  <p> Toll Free: 888-860-9010 </p>
   <p> HQ: 123 St, Orlando, Florida, USA </p> <!-- Hyperlink to google maps? -->
-  <p> All Rights Reserved ® </p>
+  <p> Fax: 123-456-7890 </p>
+<p> Email: <a href="https://www.google.com/gmail/">CompanyName@gmail.com</a></p>
+  <center> <p> All rights reserved. ® </p> </center>
   
 </div>
 </body>
