@@ -5,6 +5,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Assistant&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
 <style>
   * {
@@ -13,7 +15,6 @@
 
 body {
   font-family: 'Rubik', sans-serif;
-  
   background: white;
 }
 
@@ -59,6 +60,29 @@ body {
   color: black;
 }
 
+/* Alert styling */
+.alert {
+  padding: 20px;
+  background-color: #e6f8fa;
+  color: #003b42;
+  opacity: 1;
+  transition: opacity 0.6s;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: #7fa9ad;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: #003b42;
+}
 /* Button styling */
 .button {
   border:2px solid #003b42;
@@ -247,18 +271,35 @@ body {
 
 <div class="topnav">
   <div class="logo" >
-<div class= "clearfix">
-    <p><img src="logo.jpg" alt="Logo" style="width:50px; height:50px;">
-  </div> 
-
+    <div class= "clearfix">
+      <p><img src="TSA.png" alt="Logo" style="width:50px; height:50px;">
+    </div> 
   </div>
   
-  <a href="#" style="float:left; background-color: #003b42;color: white;">Company Name</a>
-  <a href="#" style="float:right;">Meetings</a>
-  <a href="#" style="float:right;">Resources</a>
-  <a href="#" style="float:right;">Company</a>
+  <a href="index.html" style="float:left; background-color: #003b42;color: white;">Company Name</a>
+  <a href="meetings.html" style="float:right;">Meetings</a>
+  <a href="resources.html" style="float:right;">Resources</a>
+  <a href="company.html" style="float:right;">Company</a>
   
 </div>
+
+<div class="alert">
+  <span class="closebtn" >&times;</span> 
+  <strong>Alert:</strong> Due to the COVID-19 pandemic, we have added new products under "Resources" section.
+</div>
+
+<script>
+var close = document.getElementsByClassName("closebtn");
+var i;
+
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function(){
+    var div = this.parentElement;
+    div.style.opacity = "0";
+    setTimeout(function(){ div.style.display = "none"; }, 600);
+  }
+}
+</script>
 
 <div class="header">
   <h1>Company Name</h1>
@@ -312,10 +353,11 @@ body {
 <div class="footer">
   <!-- This is the logo image. -->
  <div class= "clearfix">
-    <p><img src="logo.jpg" alt="Logo" style="float: left; width:80px;height:80px;margin-right:5px;">
+    <p><img src="TSA.png" alt="Logo" style="float: left; width:70px;height:70px;margin-right:5px;">
   </div>
-  <!-- Probably gonna take link out -->
-  <p> <a href="index.html" style="float:left;font-size: 18; color: black;">Company Name</a> </p> 
+  
+  <a href="index.html" style="float:left;font-size: 20px; color: black;">Company Name</a> 
+  <br>
   <br>
   <p> Phone: 123-456-7890 </p>
   <p> Toll Free: 888-860-9010 </p>
