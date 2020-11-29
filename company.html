@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <style>
+  * {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  
+  background: white;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  text-align: center;
+  background: white;
+  color: #003b42;
+}
+
+.header h1 {
+  font-size: 50px;
+}
+
+.header h2 {
+  font-size: 25px;
+  font-family: 'Assistant', sans-serif;
+  color: black;
+
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #003b42;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition-duration: 0.4s;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #0092a3;
+  color: black;
+}
+/* Company logo */
+.logo {
+  padding: 20px;
+  float: left;
+  
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  background: #a8dde3;
+  margin-top: 10px;
+  height: 100%;
+  
+}
+.footer p {
+  float: center;
+  font-size: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-family: 'Assistant', sans-serif;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+  .logo {
+    float: none;
+    /* This centers the logo. */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+}
+</style>
+
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Company Name</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+<script src="script.js"></script>
+
+
+<div class="topnav">
+  <div class="logo" >
+<div class= "clearfix">
+    <p><img src="TSA.png" alt="Logo" style="width:50px; height:50px;">
+  </div> 
+
+  </div>
+  
+  <a href="index.html" style="float:left; background-color: #003b42;color: white;">Company Name</a>
+  <a href="meetings.html" style="float:right;">Meetings</a>
+  <a href="resources.html" style="float:right;">Resources</a>
+  <a href="company.html" style="float:right;">Company</a>
+  
+</div>
+<div class="footer">
+  <!-- This is the logo image. -->
+ <div class= "clearfix">
+    <p><img src="TSA.png" alt="Logo" style="float: left; width:70px;height:70px;margin-right:5px;">
+  </div>
+  <!-- Probably gonna take link out -->
+  <a href="index.html" style="float:left;font-size: 20px; color: black;">Company Name</a> 
+  <br>
+  <br>
+  <p> Phone: 123-456-7890 </p>
+  <p> Toll Free: 888-860-9010 </p>
+  <p> HQ: 123 St, Orlando, Florida, USA </p> <!-- Hyperlink to google maps? -->
+  <p> Fax: 123-456-7890 </p>
+<p> Email: <a href="https://www.google.com/gmail/">CompanyName@gmail.com</a></p>
+  <center> <p> All rights reserved. ® </p> </center>
+  
+</div>
+</body>
+
+</html>
