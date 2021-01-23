@@ -1,0 +1,42 @@
+.animate {
+margin: 0;
+	width: 100%;
+	height: 10%;
+	font-family: "Assistant", sans-serif;
+	color: #fff;
+	background: linear-gradient(-45deg, #8f28f0, #2528ee, #3c97ff, #23c0d5 );
+	background-size: 400% 400%;
+	-webkit-animation: gradientBG 10s ease infinite;
+	        animation: gradientBG 10s ease infinite;
+}
+
+
+.filler {
+	width: 100%;
+	position: absolute;
+	top: 35%;
+	text-align: center;
+}
+
+@-webkit-keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+@keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
