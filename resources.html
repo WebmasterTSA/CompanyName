@@ -1,160 +1,395 @@
 <!DOCTYPE html>
 <html>
   <head>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Assistant&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
-    <style>
-  * {
-  box-sizing: border-box;
+   <!--Insert stylsheets here --> 
+	<link href="navStyle.css" rel="stylesheet" type="text/css" />
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Eclipse Industries</title>
+
+<meta name="robots" content="noindex,follow" />
+</head>
+
+<style>
+/*
+
+All grid code is placed in a 'supports' rule (feature query) at the bottom of the CSS (Line 77). 
+        
+The 'supports' rule will only run if your browser supports CSS grid.
+
+Flexbox is used as a fallback so that browsers which don't support grid will still recieve an identical layout.
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+:root {
+	font-size: 10px;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
 }
 
 body {
-  font-family: 'Rubik', sans-serif;
-  
-  background: white;
+	min-height: 100vh;
+	background-color: #fafafa;
 }
 
-/* Header/Blog Title */
-.header {
-  padding: 30px;
-  text-align: center;
-  background: white;
-  color: #003b42;
+.container {
+	max-width: 100rem;
+	margin: 0 auto;
+	padding: 0 2rem 2rem;
 }
 
-.header h1 {
-  font-size: 50px;
+.heading {
+	font-family: "Rubik", sans-serif;
+	font-size: 4rem;
+	font-weight: 500;
+	line-height: 1.5;
+	text-align: center;
+	padding: 3.5rem 0;
+	color: #1a1a1a;
 }
 
-.header h2 {
-  font-size: 25px;
-  font-family: 'Assistant', sans-serif;
-  color: black;
-
+.heading span {
+	display: block;
 }
 
-/* Style the top navigation bar */
-.topnav {
-  overflow: hidden;
-  background-color: #003b42;
+.heading h2 {
+font-size: 3rem !important;
+font-family: Assistant, sans-serif !important;
+float: left;
 }
 
-/* Style the topnav links */
-.topnav a {
-  float: right;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  transition-duration: 0.4s;
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	margin: -1rem -1rem;
 }
 
-/* Change color on hover */
-.topnav a:hover {
-  background-color: #0092a3;
-  color: black;
-}
-/* Company logo */
-.logo {
-  padding: 20px;
-  float: left;
+.gallery-item {
+	flex: 1 0 24rem;
+
+	margin: 1rem;
+	box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+	overflow: hidden;
 }
 
-/* Footer */
-.footer {
-  padding: 20px;
-  background: #a8dde3;
-  margin-top: 10px;
-  height: 100%;
-  
-}
-.footer p {
-  float: center;
-  font-size: 10px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  font-family: 'Assistant', sans-serif;
-}
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
+.gallery-image {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 400ms ease-out;
 }
 
-
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {
-  .leftcolumn, .rightcolumn {   
-    width: 100%;
-    padding: 0;
-  }
+.gallery-image:hover {
+	transform: scale(1.15);
 }
 
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 400px) {
-  .topnav a {
-    float: none;
-    width: 100%;
-  }
-  .logo {
-    float: none;
-    /* This centers the logo. */
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
+@supports (display: grid) {
+	.gallery {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+		grid-gap: 2rem;
+	}
+
+	.gallery,
+	.gallery-item {
+		margin: 0;
+	}
 }
 
-}
 </style>
-<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Company Name</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
 
-</head>
 
 <body>
 <script src="script.js"></script>
 
 
-<div class="topnav">
-  <div class="logo" >
-<div class= "clearfix">
-    <p><img src="TSA.png" alt="Logo" style="width:50px; height:50px;">
-  </div> 
+<div class="navbar">
+      <ol>
+         <span style = "padding-top: 10px;"><img src = "Logo.png" style = "width:70%; "></span>
+        <li class="dropdown">
+          <div>
+            <a>Home</a>
+          </div>
+          <div class="dropdown-content">
+            <div class = "dropHead"> <a style= "text-decoration: none;" href= "index.html"> Home </a> </div>
+          </div>
+        </li>
+        <li class="dropdown">
+          <div>
+            <a>Meetings</a>
+          </div>
+          <div class="dropdown-content">
+            <div class = "dropHead"> <a style= "text-decoration: none;" href= "meetings.html"> Meetings </a></div>
+            <a style= "text-decoration: none;" href= "#"> Video Meetings</a>
+            <a style= "text-decoration: none;" href= "#">Phone Appointments</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <div>
+            <a>Company</a>
+          </div>
+          <div class="dropdown-content">
+            <div class = "dropHead"> <a style= "text-decoration: none;" href= "company.html"> Company </a> </div>
+            <!--
+            <a style= "text-decoration: none;" href= "#">drop1</a>
+            <a style= "text-decoration: none;" href= "#">drop2</a>
+            <a style= "text-decoration: none;" href= "#">drop3</a>
+            -->
+          </div>
+        </li>
+        <li class="dropdown">
+          <div>
+            <a>Resources</a>
+          </div>
+          <div class="dropdown-content">
+            <div class = "dropHead"> <a style= "text-decoration: none;" href= "resources.html"> Resources </a> </div>
+          </div>
+        </li>
+        <li class="dropdown">
+          <div>
+            <a>Contact</a>
+          </div>
+          <div class="dropdown-content">
+            <div class = "dropHead"> <a style= "text-decoration: none;" href= "contact.html">Contact</a> </div>
+          </div>
+        </li>
+      </ol>
+  </div>
 
-  </div>
-  
-  <a href="index.html" style="float:left; background-color: #003b42;color: white;">Company Name</a>
-  <a href="meetings.html" style="float:right;">Meetings</a>
-  <a href="resources.html" style="float:right;">Resources</a>
-  <a href="company.html" style="float:right;">Company</a>
-  
+<!-- Content ideas:
+Have resources overview on top (lots of images and icons) (maybe full width image with caption on top of it?) 
+
+Below that, another section header "Products" where we do more floaty box things with summary description and stock images of daily medicine-y stuff (ex band-aids, cold medicine, pain relievers, etc.) Has basic summary details like price and quantity availible. Click on it to go to another page with more details or maybe just expand the floaty box. Underneath all this do an order form where you can checkmark what you want to buy. End with footer.
+-->
+
+<div class="container">
+
+	<h1 class="heading"><span>Resources We Offer</span></h1>
+
+  <div class="heading"> <h2>General Resources</h2> </div>
+  <br><br>
+
+	<div class="gallery">
+
+		<div class="gallery-item">
+			<a href="order1.html">
+         <img class="gallery-image" src="Images/tylenol.jpg" alt="tylenol">
+      </a>
+		</div>
+
+		<div class="gallery-item">
+      <a href="order2.html">
+			<img class="gallery-image" src="Images/bandage.png" alt="bandage">
+      </a>
+		</div>
+
+		<div class="gallery-item">
+			<a href="order3.html">
+			<img class="gallery-image" src="Images/vitamin.jpg" alt="vitamin" style="width: 300px; height: 350px;">
+      </a>
+		</div>
+    <br>
+    <div class="heading"> <h2>COVID-19 Resources</h2> </div>
+    <br>
+		<div class="gallery-item">
+			<a href="order4.html">
+			<img class="gallery-image" src="Images/masks.jpg" alt="masks">
+      </a>
+		</div>
+
+		<div class="gallery-item">
+			<a href="order5.html">
+			<img class="gallery-image" src="Images/test.jpg" alt="test">
+      </a>
+		</div>
+
+		<div class="gallery-item">
+		<a href="order6.html">
+			<img class="gallery-image" src="Images/sanitizer.jpg" alt="sanitizer" style="width: 300px; height: 350px;">
+      </a>
+		</div>
+
+	</div>
+
 </div>
-<div class="footer">
-  <!-- This is the logo image. -->
- <div class= "clearfix">
-    <p><img src="TSA.png" alt="Logo" style="float: left; width:70px;height:70px;margin-right:5px;">
-  </div>
-  <!-- Probably gonna take link out -->
-  <a href="index.html" style="float:left;font-size: 20px; color: black;">Company Name</a> 
-  <br>
-  <br>
-  <p> Phone: 123-456-7890 </p>
-  <p> Toll Free: 888-860-9010 </p>
-  <p> HQ: 123 St, Orlando, Florida, USA </p> <!-- Hyperlink to google maps? -->
-  <p> Fax: 123-456-7890 </p>
-<p> Email: <a href="https://www.google.com/gmail/">CompanyName@gmail.com</a></p>
-  <center> <p> All rights reserved. ® </p> </center>
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+
   
-</div>
+      <script id="rendered-js" >
+/*
+
+Full-page view:
+
+https://codepen.io/GeorgePark/full/vdqYom/
+
+*/
+//# sourceURL=pen.js
+    </script>
+
+  
+ <footer class="footer-section">
+        <div class="container">
+            <div class="footer-cta pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="cta-text">
+                                <h4>Find Us</h4>
+                                <span>123 Main St, Harrisburg PA</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fas fa-phone"></i>
+                            <div class="cta-text">
+                                <h4>Call Us</h4>
+                                <span>123-456-7890</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="far fa-envelope-open"></i>
+                            <div class="cta-text">
+                                <h4>Send Us an Email </h4>
+                                <span>ECL@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-content pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-logo">
+                                <a href="index.html"><img src="Logo.png" style= "width: 100%;" class="img-fluid" alt="logo"></a>
+                            </div>
+                            <div class="footer-text">
+                                <p>At Eclipse Labs, an innovative telecommunications company, we dedicate our time and effort to ensure your well being. Experts at Eclipse Labs will make sure you, the patient, are seen and diagnosed under any circumstances with the exact precision and quality of any other face to face meeting.</p>
+                            </div>
+                            <div class="footer-social-icon">
+                                <span>Follow us</span>
+                                <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                                <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
+                                <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Useful Links</h3>
+                            </div>
+                            <ul>
+                              <ul>
+                                <li><a href="#">Home</a></li>
+                              </ul>
+                            <ul>
+                                <li><a href="#">Meetings</a></li>
+                                  <ul>
+                                    <li1><a href="#">Video Meetings</a></li1>
+                                 </ul>
+
+                                 <ul>
+                                    <li1><a href="#">Phone Meetings</a></li1>
+                                  </ul>
+
+                            </ul>
+                            <ul>
+                              <li><a href="#">Company</a></li>
+                                <ul>
+                                    <li1><a href="#">Advantages</a></li1>
+                                </ul>
+                                <ul>
+                                    <li1><a href="#">Pricing</a></li1>
+                                </ul>
+                                  <ul>
+                                    <li1><a href="#">News</a></li1>
+                                </ul>
+                              </ul>
+
+                              <ul>
+                                <li><a href="#">Resources</a></li>
+                              </ul>
+
+                              <ul>
+                                <li><a href="#">Contact</a></li>
+                              </ul>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Subscribe</h3>
+                            </div>
+                            <div class="footer-text mb-25">
+                                <p>Want to recieve updates from us? Fill out the form below:</p>
+                            </div>
+                            <div class="subscribe-form">
+                                <form action="#">
+                                    <input type="text" placeholder="Email Address">
+                                    <button><i class="fab fa-telegram-plane"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-area">
+            <div class="container" style="padding:0px;">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                        <div class="copyright-text">
+                            <p>Copyright &copy; 2020, All Right Reserved</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                        <div class="footer-menu">
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Terms</a></li>
+                                <li><a href="#">Privacy</a></li>
+                                <li><a href="#">Policy</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+  
+  
+  
+  
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+
+
+
 </body>
 
 </html>
