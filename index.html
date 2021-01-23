@@ -1,292 +1,114 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Assistant&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/ico">
-    <link rel="icon" href="/favicon.ico" type="image/ico">
 
-<style>
-  * {
-  box-sizing: border-box;
-}
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 
-body {
-  font-family: 'Rubik', sans-serif;
-  background: white;
-}
-
-/* Header/Blog Title */
-.header {
-  padding: 30px;
-  text-align: center;
-  background: white;
-  color: #003b42;
-}
-
-.header h1 {
-  font-size: 50px;
-}
-
-.header h2 {
-  font-size: 25px;
-  font-family: 'Assistant', sans-serif;
-  color: black;
-
-}
-
-/* Style the top navigation bar */
-.topnav {
-  overflow: hidden;
-  background-color: #003b42;
-}
-
-/* Style the topnav links */
-.topnav a {
-  float: right;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  transition-duration: 0.4s;
-}
-
-/* Change color on hover */
-.topnav a:hover {
-  background-color: #0092a3;
-  color: black;
-}
-
-/* Alert styling */
-.alert {
-  padding: 20px;
-  background-color: #e6f8fa;
-  color: #003b42;
-  opacity: 1;
-  transition: opacity 0.6s;
-}
-
-.closebtn {
-  margin-left: 15px;
-  color: #7fa9ad;
-  font-weight: bold;
-  float: right;
-  font-size: 22px;
-  line-height: 20px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.closebtn:hover {
-  color: #003b42;
-}
-/* Button styling */
-.button {
-  border:2px solid #003b42;
-  color: #003b42;;
-  background-color: white;
-  padding: 16px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  font-family: 'Assistant', sans-serif;
-  cursor: pointer;
-  border-radius: 50px;
-}
-.button:hover {
-  background-color: #003b42;
-}
-/* Get Started button */
-.button span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-
-.button span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
-
-.button:hover span {
-  padding-right: 15px;
-  color: white;
-  transition-duration: 0.5s;
-}
-
-.button:hover span:after {
-  opacity: 1;
-  right: 0;
-  color: white;
-  transition-duration: 0.5s;
-}
-
-/* Create two unequal columns that floats next to each other */
-/* Left column */
-.leftcolumn {   
-  float: left;
-  width: 75%;
-}
-
-/* Right column */
-.rightcolumn {
-  float: left;
-  width: 25%;
-  background-color: white;
-  padding-left: 20px;
-}
-
-/* Fake image */
-.fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
-}
-
-/* Company logo */
-.logo {
-  padding: 20px;
-  float: left;
   
-}
-
-/* Add a card effect for articles */
-.card {
-  background-color: #e6f8fa;
-  padding: 20px;
-  margin-top: 20px;
-}
-.card p {
-  font-family: 'Assistant', sans-serif;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-/* Social media buttons */
-.fa {
-  padding: 20px;
-  font-size: 20px;
-  width: 60px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
-  border-radius: 50%;
-}
-
-.fa:hover {
-    opacity: 0.7;
-}
-
-.fa-facebook {
-  background: #3B5998;
-  color: white;
-}
-
-.fa-twitter {
-  background: #55ACEE;
-  color: white;
-}
-
-.fa-instagram {
-  background: #125688;
-  color: white;
-}
-
-.fa-google {
-  background: #dd4b39;
-  color: white;
-}
-
-
-/* Footer */
-.footer {
-  padding: 20px;
-  background: #a8dde3;
-  margin-top: 10px;
-  height: 100%;
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Assistant&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@1,200&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
   
-}
-.footer p {
-  float: center;
-  font-size: 10px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  font-family: 'Assistant', sans-serif;
-}
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
-}
+	<style>
 
+    
+	</style>
 
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {
-  .leftcolumn, .rightcolumn {   
-    width: 100%;
-    padding: 0;
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Eclipse Industries</title>
+	<link href="navStyle.css" rel="stylesheet" type="text/css" />
+	<link href="sBTNStyle.css" rel="stylesheet" type="text/css" />
+	<link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="indexStyle.css" rel="stylesheet" type="text/css" />
+  <link href="parrStyle.css" rel="stylesheet" type="text/css" />
+  <link href="slideStyle.css" rel="stylesheet" type="text/css" />
+  <link href="fillerStyle.css" rel="stylesheet" type="text/css" />
+  <link href="faqStyle.css" rel="stylesheet" type="text/css" />
+
+  
+
+	<script>
+		window.console = window.console || function(t) {};
+	</script>
+
+	<script>
+		if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
   }
-}
-
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 400px) {
-  .topnav a {
-    float: none;
-    width: 100%;
-  }
-  .logo {
-    float: none;
-    /* This centers the logo. */
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-}
-
-}
-</style>
-<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Company Name</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-
+	</script>
+  
 </head>
-
 <body>
-<script src="script.js"></script>
+      <div class="navbar">
+      <ol>
+         <span style = "padding-top: 10px;"><img src = "Logo.png" style = "width:70%; "></span>
+        <li class="dropdown">
+          <div>
+            <a>Home</a>
+          </div>
+          <div class="dropdown-content">
+            <div class = "dropHead"> <a style= "text-decoration: none;" href= "index.html"> Home </a> </div>
+          </div>
+        </li>
+        <li class="dropdown">
+          <div>
+            <a>Meetings</a>
+          </div>
+          <div class="dropdown-content">
+            <div class = "dropHead"> <a style= "text-decoration: none;" href= "meetings.html"> Meetings </a></div>
+            <a style= "text-decoration: none;" href= "#"> Video Meetings</a>
+            <a style= "text-decoration: none;" href= "#">Phone Appointments</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <div>
+            <a>Company</a>
+          </div>
+          <div class="dropdown-content">
+            <div class = "dropHead"> <a style= "text-decoration: none;" href= "company.html"> Company </a> </div>
+            <!--
+            <a style= "text-decoration: none;" href= "#">Advantages</a>
+            <a style= "text-decoration: none;" href= "#">Pricing</a>
+            <a style= "text-decoration: none;" href= "#">News</a>
+            -->
+          </div>
+        </li>
+        <li class="dropdown">
+          <div>
+            <a>Resources</a>
+          </div>
+          <div class="dropdown-content">
+            <div class = "dropHead"> <a style= "text-decoration: none;" href= "resources.html"> Resources </a> </div>
+          </div>
+        </li>
+        <li class="dropdown">
+          <div>
+            <a>Contact</a>
+          </div>
+          <div class="dropdown-content">
+            <div class = "dropHead"> <a style= "text-decoration: none;" href= "contact.html">Contact</a> </div>
+          </div>
+        </li>
+        </ol>
+      </div>
 
-
-<div class="topnav">
-  <div class="logo" >
-    <div class= "clearfix">
-      <p><img src="TSA.png" alt="Logo" style="width:50px; height:50px;">
-    </div> 
-  </div>
-  
-  <a href="index.html" style="float:left; background-color: #003b42;color: white;">Company Name</a>
-  <a href="meetings.html" style="float:right;">Meetings</a>
-  <a href="resources.html" style="float:right;">Resources</a>
-  <a href="company.html" style="float:right;">Company</a>
-  
+    <div class="alert">
+      <span class="closebtn" >&times;</span> 
+      <strong>Alert:</strong> Due to the COVID-19 pandemic, we have added new products under "Resources" section.
+    </div>
+    
 </div>
-
-<div class="alert">
-  <span class="closebtn" >&times;</span> 
-  <strong>Alert:</strong> Due to the COVID-19 pandemic, we have added new products under "Resources" section.
-</div>
+</body>
 
 <script>
 var close = document.getElementsByClassName("closebtn");
@@ -301,72 +123,604 @@ for (i = 0; i < close.length; i++) {
 }
 </script>
 
-<div class="header">
-  <h1>Company Name</h1>
-  <h2>Got a medical problem? We can help.</h2>
+  <body>
+    <div class="slideshow-container">
+
+      <div class="mySlides fade img1">
+        <div class="numbertext">1 / 4</div>
+        <div class = "parrText">
+            <div class="header">
+              <h1>Eclipse Labs</h1>
+              <h2>Got a medical problem? We can help.</h2>
+            </div>
+            <center>
+              <button class="button"><span style = "z-index: 0;"> <a href= "meetings.html"> Get Started </a> </span></button>
+            </center>
+        </div>
+      </div>
+
+      <div class="mySlides fade img2" >
+        <div class="numbertext">2 / 4</div>
+        <div class = "parrText">
+            <div class="header">
+              <h1>Eclipse Labs</h1>
+              <h2>Got a medical problem? We can help.</h2>
+            </div>
+            <center>
+              <button class="button"><span style = "z-index: 0;"><a href= "meetings.html"> Get Started </a></span></button>
+            </center>
+        </div>
+      </div>
+
+      <div class="mySlides fade img3">
+        <div class="numbertext">3 / 4</div>
+        <div class = "parrText">
+            <div class="header">
+              <h1>Eclipse Labs</h1>
+              <h2>Got a medical problem? We can help.</h2>
+            </div>
+            <center>
+              <button class="button"><span style = "z-index: 0;"><a href= "meetings.html"> Get Started </a></span></button>
+            </center>
+        </div>
+      </div>
+
+      <div class="mySlides fade img4">
+        <div class="numbertext">4 / 4</div>
+        <div class = "parrText">
+            <div class="header">
+              <h1>Eclipse Labs</h1>
+              <h2>Got a medical problem? We can help.</h2>
+            </div>
+            <center>
+              <button class="button"><span style = "z-index: 0;"><a href= "meetings.html"> Get Started </a></span></button>
+            </center>
+        </div>
+      </div>
+    </div>
+</body>
+  <script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 3000); // Change image every 3 seconds
+}
+</script>
+
+<div class="service">
+  <center>
+<h2>Medical Services with First Rate Help</h2>
+<br>
+<h4> Eclipse Labs prioritizes effciency along with your care. With our many different services coupled with our excellent customer service, we bring you the priority you deserve! That's why we are rated in the top five best telemed communication company in the world! </h4>
+</center>
+  <div class="icon">
+<i class="material-icons" style="font-size:60px; color: #003b42;">today</i>
+<br>
+<h2>Schedule Appointments Daily </h2>
 </div>
+
+<div class="icon">
+<i class="material-icons" style="font-size:60px; color: #003b42;">contact_phone</i>
+<br>
+<h2>Video and Audio Meetings </h2>
+</div>
+
+<div class="icon">
+<i class="material-icons" style="font-size:60px; color: #003b42;">access_time</i>
+<br>
+<h2> 24/7 Availibility </h2>
+</div>
+
+<div class="icon">
+<i class="material-icons" style="font-size:60px; color: #003b42;"> person</i>
+<br>
+<h2> Professional Advice </h2>
+</div>
+   <br><br><br><br><br><br> <br><br><br>   
+    
+</div>
+
+
+<!-- FAQ stuff -->
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+<body translate="no" >
+  <center>
+  <div class="container" style="background-color: #e6f8fa; width:100%; margin-left:0%; margin-right:0%; ">
+          <h1 class="heading-primary">Frequently Asked Questions</h1>
+          <div class="accordion">
+            <dl>
+              <dt>
+                <a href="#accordion1" aria-expanded="false" aria-controls="accordion1" class="accordion-title accordionTitle js-accordionTrigger">Do virtual appointments have the same quality as in-person appointments?</a>
+              </dt>
+              <dd class="accordion-content accordionItem is-collapsed" id="accordion1" aria-hidden="true">
+                <p> Yes! You will still be talking with an expert who is able to help meet your medical needs, whether you need prescribed medication or just need to ask a health related question. In fact, virtual meetings are more efficient due to little to no waiting time. </p>
+              </dd>
+              <dt>
+                <a href="#accordion2" aria-expanded="false" aria-controls="accordion2" class="accordion-title accordionTitle js-accordionTrigger">
+                  How can I schedule virtual appointments?</a>
+              </dt>
+              <dd class="accordion-content accordionItem is-collapsed" id="accordion2" aria-hidden="true">
+                <p>Simply click on our Meetings page, and choose which option you would like. We have appointments in three formats: video calls, phone calls, and text messages. Once you choose the option that works best for you, you can call or email us to set up an appointment. </p>
+                <p> You can click <a href="meetings.html"> here </a> to access the meetings page.
+                
+              </dd>
+              <dt>
+                <a href="#accordion3" aria-expanded="false" aria-controls="accordion3" class="accordion-title accordionTitle js-accordionTrigger">
+                  How has Eclipse Labs adjusted to the COVID-19 pandemic?
+                </a>
+              </dt>
+              <dd class="accordion-content accordionItem is-collapsed" id="accordion3" aria-hidden="true">
+                <p> We take serious responsibility in keeping our employees safe. Our labs are now deep cleaned every day after use, and we always ensure everyone wears masks while maintaining a safe distance apart from each other. We hope to assist hospitals that are being overcrowded in treating patients, so that nobody has to be turned away. </p>
+              </dd>
+              <dt>
+                <a href="#accordion3" aria-expanded="false" aria-controls="accordion3" class="accordion-title accordionTitle js-accordionTrigger">
+                  Can I buy healthcare products online?
+                </a>
+              </dt>
+              <dd class="accordion-content accordionItem is-collapsed" id="accordion3" aria-hidden="true">
+                <p> We have a <a href= "resources.html" style= "text-decoration: none !important;"> Resources </a> tab with many of our purchasable products. You can click on each product to see more details. </p>
+              </dd>
+            </dl>
+          </div>
+          </center>
+        </div>
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+
+  
+      <script id="rendered-js" >
+(function () {
+  var d = document,
+  accordionToggles = d.querySelectorAll('.js-accordionTrigger'),
+  setAria,
+  setAccordionAria,
+  switchAccordion,
+  touchSupported = ('ontouchstart' in window),
+  pointerSupported = ('pointerdown' in window);
+
+  skipClickDelay = function (e) {
+    e.preventDefault();
+    e.target.click();
+  };
+
+  setAriaAttr = function (el, ariaType, newProperty) {
+    el.setAttribute(ariaType, newProperty);
+  };
+  setAccordionAria = function (el1, el2, expanded) {
+    switch (expanded) {
+      case "true":
+        setAriaAttr(el1, 'aria-expanded', 'true');
+        setAriaAttr(el2, 'aria-hidden', 'false');
+        break;
+      case "false":
+        setAriaAttr(el1, 'aria-expanded', 'false');
+        setAriaAttr(el2, 'aria-hidden', 'true');
+        break;
+      default:
+        break;}
+
+  };
+  //function
+  switchAccordion = function (e) {
+    console.log("triggered");
+    e.preventDefault();
+    var thisAnswer = e.target.parentNode.nextElementSibling;
+    var thisQuestion = e.target;
+    if (thisAnswer.classList.contains('is-collapsed')) {
+      setAccordionAria(thisQuestion, thisAnswer, 'true');
+    } else {
+      setAccordionAria(thisQuestion, thisAnswer, 'false');
+    }
+    thisQuestion.classList.toggle('is-collapsed');
+    thisQuestion.classList.toggle('is-expanded');
+    thisAnswer.classList.toggle('is-collapsed');
+    thisAnswer.classList.toggle('is-expanded');
+
+    thisAnswer.classList.toggle('animateIn');
+  };
+  for (var i = 0, len = accordionToggles.length; i < len; i++) {if (window.CP.shouldStopExecution(0)) break;
+    if (touchSupported) {
+      accordionToggles[i].addEventListener('touchstart', skipClickDelay, false);
+    }
+    if (pointerSupported) {
+      accordionToggles[i].addEventListener('pointerdown', skipClickDelay, false);
+    }
+    accordionToggles[i].addEventListener('click', switchAccordion, false);
+  }window.CP.exitedLoop(0);
+})();
+    </script>
+
+
+<div class ="animate">
+  <div class="container">
+    <center>
+    <h1 style="margin: 0%; padding: 5%; font-size: 40px;">About Us</h1>
+    </center>
+  </div>
+</div>
+</body>
+
+<button class="tablink" onclick="openPage('About', this, '#FDA085 ')" id="defaultOpen">About</button>
+<button class="tablink" onclick="openPage('History', this, '#6FD6FF')" >History</button>
+<button class="tablink" onclick="openPage('Locations', this, '#A890FE')">Locations</button>
+<button class="tablink" onclick="openPage('Experts', this, '#1EAE98')">Experts</button>
+<button class="tablink" onclick="openPage('Community', this, '#FE90AF')">Community</button>
+
+<div id="About" class="tabcontent" style= "margin-right: 0;">
+  <h3> About </h3>
+  <br>
+  <p>At Eclipse Labs, an innovative telecommunications company, we dedicate our time and effort to ensure your well being. Experts at Eclipse Labs will make sure you, the patient, are seen and diagnosed under any circumstances with the exact precision and quality of any other face to face meeting.
+  </p>
+  <br>
 
 <center>
-<button class="button"><span>Get Started</span></button>
+<div class="row1">
+  <div class="col1">
+    <div class="about_content_box_all mt-3">
+       <div class="about_detail text-center">
+         <center>
+          <div class="about_icon">
+             <i class="fas fa-handshake"></i>
+          </div>
+          <h3 style= "padding-top: 10px;"> Equal Treatment </h3>
+          </center>
+        </div>
+    </div>
+  </div>
+
+  <div class="col1">
+    <div class="about_content_box_all mt-3">
+      <div class="about_detail text-center">
+        <center>
+        <div class="about_icon">
+          <i class="fas fa-head-side-mask"></i>
+        </div>
+        <h3 style= "padding-top: 10px;"> Prioritizing Safety</h3>
+        <center>
+      </div>
+    </div>
+  </div>
+
+  <div class="col1">
+    <div class="about_content_box_all mt-3">
+      <center>
+      <div class="about_detail text-center">
+        <div class="about_icon">
+          <i class='fas fa-donate'></i>
+        </div>
+        <h3 style= "padding-top: 10px;"> Service </h3>
+      <center>
+      </div>
+    </div>
+  </div>
+</div>
 </center>
 
-<div class="row">
-  <div class="leftcolumn">
-    <div class="card">
-      <h2>TITLE HEADING</h2>
-      <h5>Title description</h5>
-      <div class="fakeimg" style="height:200px;">Image</div>
-      <p>Some text..</p>
-      
+  <h3 style="font-size: 35px;"> Equal Treatment </h3>
+  <br>
+  <h1> "Our sole purpose lies in helping you, no matter who you are, live a healthier life." </h1> 
+  <br><br>
+  <p>When Eclipse Labs was founded, it was based on the idea of helping others, no matter their differences. To this day, we still value that ideal, and strive to treat everyone with the same importance and value in their health and as a person.
+  </p>
+  
+<br><br>
+
+  <h3 style="font-size: 35px;"> Prioritizing Safety </h3>
+  <br>
+  <p> We take the pandemic very seriously, and we encourage others to do so as well. While many of our employees are working virtually, those who work at our labs must come in order to meet the healthcare needs of the public. We still prioritize our employees' safety. Along with daily cleaning, we require masks in our facilites. Employees stay a safe distance apart with minimal physical interaction with each other.  </p> 
+
+  <br>
+
+  <p>We sincerely thank all those who are risking their lives and working hard to provide for everybody during this stressful situation.</p>
+
+<br><br>
+
+  <h3 style="font-size: 35px;"> Service </h3>
+  <br>
+  <p> At Eclipse Labs, we want to give back. We have had many successful charity events over the years, and we plan to do more as the company grows. Recently, due to the COVID-19 pandemic, we have volunteered to create, test, and distribute COVID-19 testing kits. We are aware of the rapid demand, and we would like to do as much as we can and join the effort of other healthcare providers.
+  </p>
+
+  <!--could do donate button here -->
+
+
+</div>
+
+<div id="History" class="tabcontent">
+  <h3>History</h3>
+  <br>
+  <p>In Eclipse Labs' 20 year history, no customer has been left unsatsified. Eclipse Labs has regularly been left positive reveiws. The three founders took on the initiative to help people in need when they met at college. It is there, that they started Project Eclipse to help people in need after witnessing firsthand how many people needed healthcare. They continued Project Eclipse even when they graduated, and expanded Project Eclipse for their passion of helping people. Now, Eclipse Labs is a international company with over 250 established locations across the globe, helping people everywhere! </p> 
+</div>
+
+<div id="Locations" class="tabcontent">
+  <h3>Locations</h3>
+  <br>
+  <p>Eclipse Labs is Headquartered in Harrisburg, Pennsylvania. With over 250 established locations across the globe, 25,000 employees at your service, 50,000 voluenteers worldwide, over 250 help programmes, Eclipse Labs is ready and avalible to help at any time, and at any locale.</p>
+  <br>
+  <p> Update: Due to the COVID-19 pandemic, many of our locations have closed to the public in order to prevent the spread. We currently only allow authorized personell. Customers can still order products online.</p>
+
+  <center>
+  <div class= "clearfix">
+      <img src="Images/building.jpg" alt="build" style="width:100%;margin-top:5%;">
     </div>
-    <div class="card">
-      <h2>TITLE HEADING</h2>
-      <h5>Title description</h5>
-      <div class="fakeimg" style="height:200px;">Image</div>
-      <p>Some text..</p>
-     
+  </center>
+</div>
+
+<div id="Experts" class="tabcontent">
+  <h3>Experts</h3>
+  <br>
+  <p>Diversity is essential to success. At Eclipse Labs, there are professionals from many different fields that are available to serve your medical needs. </p>
+<br><br>
+
+    <div class = "list">
+    <ul style= "padding-bottom: 10px;"" >
+      <h3> Specalists </h3>
+      <br>
+        <li> Anesthesiologists</li>
+        <li> Neurologists</li>
+        <li> Cardiologists</li>
+        <li>Pyschologists</li>
+        <li>Gynecologists</li>
+        <br>
+        <h3> General Health</h3>
+        <br>
+          <ul>
+          <li> Pediatricians </li>
+          <li> Dentists </li>
+          <li> Ophthalmologists </li>
+          </ul>
+        <br>
+        <h3> Others </h3>
+        <br>
+        <li> Pharmacists</li>
+        <li> Physicians </li>
+        <li> Nurses </li>   
+    </ul>
     </div>
+    
+    <div class= "clearfix">
+      <img src="Images/doc.jpg" alt="Doc" style="float: right; width:60%; border-radius: 20px;">
+    </div>
+
   </div>
-  <div class="rightcolumn">
-    <div class="card">
-      <h2>About Us</h2>
-      <div class="fakeimg" style="height:100px;">Image</div>
-      <p>We are a telecommunications company.</p>
-    </div>
-    <div class="card">
-      <h3>Popular Products</h3>
-      <div class="fakeimg"> <!--src="..." alt="..."--> <p>Image</p></div>
-      <div class="fakeimg"><p>Image</p></div>
-      <div class="fakeimg"><p>Image</p></div>
-    </div>
-    <div class="card">
-      <h3>Follow Us</h3>
-      <p>We'd love to hear from you.</p>
-      <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
-      <a href="https://twitter.com/?lang=en" class="fa fa-twitter"></a>
-      <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
-      <a href="https://www.google.com/" class="fa fa-google"></a>
-    </div>
+
+<div id="Community" class="tabcontent">
+  <h3>Community</h3>
+  <br>
+  <p> During this pandemic, Eclipse Labs is proud to assemble their team of over 50,000 volunteers that are ready to assist those in need to get the care they deserve. </p>
+
+<br>
+
+<h3 style="text-align:center">Our Volunteering Projects</h3>
+
+<br><br>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="img_5terre.jpg">
+      <img src="Images/vol1.jpg" alt="Cinque Terre" width="600" height="400">
+    </a>
+    
   </div>
 </div>
 
-<div class="footer">
-  <!-- This is the logo image. -->
- <div class= "clearfix">
-    <p><img src="TSA.png" alt="Logo" style="float: left; width:70px;height:70px;margin-right:5px;">
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="img_forest.jpg">
+      <img src="Images/vol2.jpg" alt="Forest" width="600" height="400">
+    </a>
+    
   </div>
-  
-  <a href="index.html" style="float:left;font-size: 20px; color: black;">Company Name</a> 
-  <br>
-  <br>
-  <p> Phone: 123-456-7890 </p>
-  <p> Toll Free: 888-860-9010 </p>
-  <p> HQ: 123 St, Orlando, Florida, USA </p> <!-- Hyperlink to google maps? -->
-  <p> Fax: 123-456-7890 </p>
-<p> Email: <a href="https://www.google.com/gmail/">CompanyName@gmail.com</a></p>
-  <center> <p> All rights reserved. ® </p> </center>
-  
 </div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="img_lights.jpg">
+      <img src="Images/vol5.jpg" alt="Northern Lights" width="600" height="400">
+    </a>
+    
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="img_mountains.jpg">
+      <img src="Images/vol6.jpg" alt="Mountains" width="600" height="400">
+    </a>
+    
+  </div>
+</div>
+
+<div class="clearfix"></div>
+
+
+
+
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
+
+<!--Add customer quotes and feedback thing here-->
+
+ <footer class="footer-section">
+        <div class="container">
+            <div class="footer-cta pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="cta-text">
+                                <h4>Find Us</h4>
+                                <span>123 Main St, Harrisburg PA</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fas fa-phone"></i>
+                            <div class="cta-text">
+                                <h4>Call Us</h4>
+                                <span>123-456-7890</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="far fa-envelope-open"></i>
+                            <div class="cta-text">
+                                <h4>Send Us an Email </h4>
+                                <span>ECL@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-content pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-logo">
+                                <a href="index.html"><img src="Logo.png" style= "width: 100%;" class="img-fluid" alt="logo"></a>
+                            </div>
+                            <div class="footer-text">
+                                <p>At Eclipse Labs, an innovative telecommunications company, we dedicate our time and effort to ensure your well being. Experts at Eclipse Labs will make sure you, the patient, are seen and diagnosed under any circumstances with the exact precision and quality of any other face to face meeting.</p>
+                            </div>
+                            <div class="footer-social-icon">
+                                <span>Follow us</span>
+                                <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                                <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
+                                <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Useful Links</h3>
+                            </div>
+                            <ul>
+                              <ul>
+                                <li><a href="#">Home</a></li>
+                              </ul>
+                            <ul>
+                                <li><a href="#">Meetings</a></li>
+                                  <ul>
+                                    <li1><a href="#">Video Meetings</a></li1>
+                                 </ul>
+
+                                 <ul>
+                                    <li1><a href="#">Phone Meetings</a></li1>
+                                  </ul>
+
+                            </ul>
+                            <ul>
+                              <li><a href="#">Company</a></li>
+                                <ul>
+                                    <li1><a href="#">Advantages</a></li1>
+                                </ul>
+                                <ul>
+                                    <li1><a href="#">Pricing</a></li1>
+                                </ul>
+                                  <ul>
+                                    <li1><a href="#">News</a></li1>
+                                </ul>
+                              </ul>
+
+                              <ul>
+                                <li><a href="#">Resources</a></li>
+                              </ul>
+
+                              <ul>
+                                <li><a href="#">Contact</a></li>
+                              </ul>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Subscribe</h3>
+                            </div>
+                            <div class="footer-text mb-25">
+                                <p>Want to recieve updates from us? Fill out the form below:</p>
+                            </div>
+                            <div class="subscribe-form">
+                                <form action="#">
+                                    <input type="text" placeholder="Email Address">
+                                    <button><i class="fab fa-telegram-plane"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-area">
+            <div class="container" style="padding:0px;">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                        <div class="copyright-text">
+                            <p>Copyright &copy; 2020, All Right Reserved</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                        <div class="footer-menu">
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Terms</a></li>
+                                <li><a href="#">Privacy</a></li>
+                                <li><a href="#">Policy</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+  
+  
+  
+  
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+
 </body>
 
 </html>
