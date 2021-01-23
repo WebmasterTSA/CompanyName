@@ -1,0 +1,311 @@
+		/* Header/Blog Title */
+		.header {
+			padding: 30px;
+			text-align: center;
+			color: #003b42;
+		}
+
+		.header h1 {
+			font-size: 50px;
+      padding-right: 20px;
+      padding-left: 20px;
+      padding-top: 20px;
+      padding-bottom: 50px;
+		}
+
+		.header h2 {
+			font-size: 25px;
+			font-family: 'Assistant', sans-serif;
+			color: black;
+
+		}
+		.center {
+			padding: 20px 0;
+		}
+
+    ul{
+      display: block;
+      padding: 0px;
+      font-size: 20px;
+      list-style-type: square;
+      margin-block-end: 0em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+
+
+    }
+    .list {
+      display: block;
+      margin-right: 10px;
+      padding: 0;
+    }
+
+		/* Alert styling */
+		.alert {
+			padding: 20px;
+			background-color: #e6f8fa;
+			color: #003b42;
+			opacity: 1;
+			transition: opacity 0.6s;
+      position: sticky;
+      top: 70px;
+      z-index: 2;
+		}
+
+		.closebtn {
+			margin-left: 15px;
+			color: #7fa9ad;
+			font-weight: bold;
+			float: right;
+			font-size: 22px;
+			line-height: 20px;
+			cursor: pointer;
+			transition: 0.3s;
+		}
+
+		.closebtn:hover {
+			color: #003b42;
+		}
+
+		/* Button styling */
+		.button {
+			border: 2px solid #003b42;
+			color: #003b42;
+			background-color: white;
+			padding: 16px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			font-family: 'Assistant', sans-serif;
+			cursor: pointer;
+			border-radius: 50px;
+		}
+
+		.button:hover {
+			background-color: #003b42;
+		}
+
+    .button a {
+      color: #003b42;
+    }
+
+    .button:hover a {
+      color: white;
+      transition: 0.5s;
+    }
+
+		/* Get Started button */
+		.button span {
+			cursor: pointer;
+			display: inline-block;
+			position: relative;
+			transition: 0.5s;
+		}
+
+		.button span:after {
+			content: '\00bb';
+			position: absolute;
+			opacity: 0;
+			top: 0;
+			right: -20px;
+			transition: 0.5s;
+		}
+
+		.button:hover span {
+			padding-right: 15px;
+			color: white;
+			transition-duration: 0.5s;
+		}
+
+		.button:hover span:after {
+			opacity: 1;
+			right: 0;
+			color: white;
+			transition-duration: 0.5s;
+		}
+
+		/* Company logo */
+		.logo {
+			padding: 20px;
+			float: left;
+		}
+    /*Div underneath slideshow*/
+    .service {
+      background-color: white;
+      padding: 3%;
+    }
+    
+    .service h2 {
+      font-family: "Assistant", sans-serif;
+      color: #003b42;
+      font-size: 40px;
+    }
+    .service h4 {
+      font-family: "Assistant", sans-serif;
+      color: #003b42;
+      font-size: 20px;
+    }
+    .icon {
+      padding: 4%;
+      margin-left: 3%;
+      width: 20%;
+      text-align: center;
+      float: left;
+      /*add margin-bottom if needed*/
+    }
+    .icon h2 {
+      color:#003b42;
+      font-size: 15px;
+      text-align: center;
+      /*add a font-family*/
+    }
+
+  /* Style tab links */
+
+  * {box-sizing: border-box}
+  
+  .tablink {
+  background-color: #003b42;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 24px 26px;
+  font-size: 17px;
+  width: 20%;
+  font-family: "Rubik", sans-serif;
+}
+
+.tablink:hover {
+  background-color: #036f7a;
+  transition: 0.5s;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20%;
+  height: 50%;
+  font-family: Assistant, sans-serif;
+}
+.tabcontent h1{
+  font-family: "Barlow", sans-serif;
+  font-size: 30px;
+}
+.tabcontent h3{
+  font-weight: bold;
+  font-size: 25px;
+  color: #e6f8fa
+}
+.tabcontent p{
+  font-family: 'Nunito', sans-serif;
+  font-size: 20px;
+
+}
+
+#About {background-color: #FDA085 ;}
+#History {background-color: #6FD6FF}
+#Locations {background-color: #A890FE}
+#Experts {background-color: #1EAE98;}
+#Community {background-color: #FE90AF;}
+
+/* Clearfix (clear floats) */
+    .row1 {
+      height: 200px;
+      width: 800px;
+    }
+    .row1::after {
+      content: "";
+      clear: both;
+      display: table;
+      width: 100%;
+      height: 100%;
+    }
+    .col1 {
+      float: left;
+      flex: 33.33%;
+      padding: 5px;
+      margin-left: 7%;
+    }
+    .about_icon i {
+    font-size: 22px;
+    height: 65px;
+    width: 65px;
+    line-height: 65px;
+    display: inline-block;
+    background: #fff;
+    border-radius: 35px;
+    color: #003b42;
+    box-shadow: 0 8px 20px -2px rgba(158, 152, 153, 0.5);
+}
+
+.about_header_main .about_heading {
+    max-width: 450px;
+    font-size: 24px;
+}
+
+.about_icon span {
+    position: relative;
+    top: -10px;
+}
+
+.about_content_box_all {
+    padding: 28px;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 500px) {
+  .col1 {
+    width: 100%;
+  }
+}
+
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: 200px;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
